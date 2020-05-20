@@ -1,0 +1,11 @@
+.table-wrap {
+    height: 500px;
+    overflow-y: auto;
+  }
+th,tr{
+  text-align: center;
+}
+.formdata{
+  margin:auto;
+  width:50%;
+}

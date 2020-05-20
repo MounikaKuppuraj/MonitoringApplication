@@ -1,0 +1,31 @@
+<div ng-include="'/views/form.html'"></div>
+<div class="container" ng-show="show">
+<div class="table-wrap">
+    <table class="table">
+        <thead>
+            <tr>
+                <th ng-click="doSort('memory')">
+                    Memory <span class="glyphicon glyphicon-sort"></span>
+                </th>
+                <th ng-click="doSort('cpu')">
+                    Cpu <span class="glyphicon glyphicon-sort"></span>
+                </th>
+                <th ng-click="doSort('disk')">
+                    Disk <span class="glyphicon glyphicon-sort"></span>
+                </th>
+                <th ng-click="doSort('created_at')">
+                    Created_at <span class="glyphicon glyphicon-sort"></span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="detail in averageDetails | orderBy:sortBy:reverse">
+                <td>{{detail.memory}}</td>
+                <td>{{detail.cpu}}</td>
+                <td>{{detail.disk}}</td>
+                <td>{{detail.created_at}}</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+</div>

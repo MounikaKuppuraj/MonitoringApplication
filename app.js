@@ -1,0 +1,14 @@
+(function(){
+    angular.module('monitoringApp',['ngRoute']);
+    angular.module('monitoringApp').config(function($routeProvider){
+        $routeProvider
+        .when('/systemdetails',{
+            templateUrl:'/views/systemdetails.html'
+        })
+        .when('/averagedetails',{
+            templateUrl:'/views/averagedetails.html',
+            controller:'averageDetailsController'
+        })
+        .otherwise({redirectTo:'/systemdetails'})
+    })
+}())
